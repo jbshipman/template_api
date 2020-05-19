@@ -20,6 +20,6 @@
 
 # Deployment instructions
 
-# template_api
+# Links and resources
 
 [gitHub repo](https://github.com/jbshipman/template_api)
