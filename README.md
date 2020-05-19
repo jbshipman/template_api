@@ -1,25 +1,27 @@
 # Template_API
 
-# Ruby version
+## Configuration
+
+### Ruby version
 
 2.6.1
 
-# System defaults
+### System defaults
 
 - sessions based user auth setup for use
 
-# Configuration
+### Database creation
 
-# Database creation
+### Database initialization
 
-# Database initialization
+## Deployment
 
-# How to run the test suite
+### Services (job queues, cache servers, search engines, etc.)
 
-# Services (job queues, cache servers, search engines, etc.)
+## Testing
 
-# Deployment instructions
+### How to run the test suite
 
-# Links and resources
+## Links and resources
 
 [gitHub repo](https://github.com/jbshipman/template_api)
