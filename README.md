@@ -62,8 +62,8 @@ Server response if configuration is correct:
 ## Links and resources
 
 - [gitHub repo](https://github.com/jbshipman/template_api)
-- [Design Docs]()
+- ([Design Docs]())
 - [ERModel link](https://my.mindnode.com/H7e2z2zoBpSTP6Mxqfpz3ykivsDkq5VDztpQB6Kr#-229.3,-212.0,2)
 - [Edutechnical HTTPS session cookies](https://youtu.be/z18zLCAg7UU)
-- [Project Blog]()
-- [Project Demo]()
+- ([Project Blog]())
+- ([Project Demo]())
