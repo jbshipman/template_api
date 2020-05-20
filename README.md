@@ -209,18 +209,27 @@ In Terminal,
 2. New Terminal Tab type the following:
 
 ```shellscript
-curl --header "Content-Type: application/json" --request POST --data '{"user":
-{"username":"ronkilav", "email":"ronkilav@email.com","password":"asdfasdf"}}'
+curl --header "Content-Type: application/json" \
+--request POST \
+--data '{"user":{"username":"ronkilav", "email":"ronkilav@email.com","password":"asdfasdf"}}' \
 http://localhost:3001/sessions
 ```
 
-> It is just easier to type this in Terminal than to try to test api with an application like Postman or Insomnia.
+> It is just easier to type this in Terminal than to try to test api with an application like Postman or Insomnia. The backslash is just to allow multiple lines in Terminal.
 
 Server response if configuration is correct:
 
 ```shellscript
-{"status":"created","logged_in":true,"user":{"id":1,"username":"ronkilav","email":"ronkilav@email.com","password_digest":"$2a$12$Fj6ZBybAM15mNdQYeuSzceiKXwH5Knl0VTNmfuU9BxQzyY9yBnncK","created_at":"2020-05-19T20:45:58.288Z","updated_at":"2020-05-19T20:45:58.288Z"}}[16:06:22]
+{"status":"created",
+"logged_in":true,
+"user":{"id":1,"username":"ronkilav","email":"ronkilav@email.com",
+"password_digest":"$2a$12$Fj6ZBybAM15mNdQYeuSzceiKXwH5Knl0VTNmfuU9BxQzyY9yBnncK",
+"created_at":"2020-05-19T20:45:58.288Z",
+"updated_at":"2020-05-19T20:45:58.288Z"}}
+[16:06:22]
 ```
+
+> Output is actually on a single line, I placed it on multiple lines for readablity.
 
 ### How to run the test suite
 
