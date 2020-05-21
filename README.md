@@ -1,6 +1,6 @@
 # Template_API
 
-This readme can be used not just a refernce for the template but also goes into details for how the user authentication works and why it is configured the way it is.
+This readme can be used not just a reference for the template but also goes into details for how the user authentication works and why it is configured the way it is. It is very important to note that this all comes from a great youtube series from [Edutechnical HTTPS session cookies](https://www.youtube.com/playlist?list=PLgYiyoyNPrv_yNp5Pzsx0A3gQ8-tfg66j).
 
 ## Configuration
 
@@ -191,13 +191,13 @@ end
 
 > Makes sure authentication token is being checked all the time.
 
+### Forgotten password
+
 ### Database initialization
 
-(_steps to spin up dB_)
+`rails db:create` is all that is needed to create the initial databases. By default this will create a deveolpment and test database.
 
 ## Deployment
-
-(_steps to deploy local copy of api_)
 
 ## Testing
 
@@ -241,5 +241,6 @@ Server response if configuration is correct:
 - ([Design Docs]())
 - [ERModel link](https://my.mindnode.com/H7e2z2zoBpSTP6Mxqfpz3ykivsDkq5VDztpQB6Kr#-229.3,-212.0,2)
 - [Edutechnical HTTPS session cookies](https://www.youtube.com/playlist?list=PLgYiyoyNPrv_yNp5Pzsx0A3gQ8-tfg66j)
+- [Forgot password](https://medium.com/binar-academy/forgot-password-feature-on-rails-api-8e4a7368c59)
 - ([Project Blog]())
 - ([Project Demo]())
