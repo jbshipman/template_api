@@ -25,9 +25,9 @@ class PasswordsController < ApplicationController
 
     if params[:email].blank?
       return render json: { error: "Token not present" }
+    else
+      user = User.find_by(reset_password_token: token)
     end
-
-    user = User.find_by(reset_password_token: token)
 
     if user.present? && user.password_token_valid?
       if user.reset_password!(params[:password])
