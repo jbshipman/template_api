@@ -3,12 +3,12 @@ class PasswordsController < ApplicationController
     # check first if email exists, neede d because
     # though email is required to register, non-templated app
     # may allow for email to be removed by user later
-    if params[:email].blank?
-      return render json: { error: "Email not present" }
+    if params[:username].blank?
+      return render json: { error: "Username not present" }
+    else
+      # find user by email
+      user = User.find_by(username: params[:username])
     end
-
-    # find user by email
-    user = User.find_by(email: params[:email])
 
     # if present then generate a token
     if user.present?
