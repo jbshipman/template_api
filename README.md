@@ -20,9 +20,11 @@ This readme can be used not just a reference for the template but also goes into
 
 ---
 
-### Database topology
+### Database initialization
 
-#### User Model
+`rails db:create` is all that is needed to create the initial databases. By default this will create a deveolpment and test database.
+
+### User Model Configuration
 
 - Used for user authentication
 
@@ -177,7 +179,7 @@ def home
 end
 ```
 
-> Render json status.
+> Render json status at server root for basic checking of function - i.e. is the server running.
 
 ---
 
@@ -189,13 +191,9 @@ end
 ...
 ```
 
-> Makes sure authentication token is being checked all the time.
+> Makes sure authentication token is verified before anything else.
 
 ### Forgotten password
-
-### Database initialization
-
-`rails db:create` is all that is needed to create the initial databases. By default this will create a deveolpment and test database.
 
 ## Deployment
 
@@ -231,16 +229,17 @@ Server response if configuration is correct:
 
 > Output is actually on a single line, I placed it on multiple lines for readablity.
 
-### How to run the test suite
+### Forgotten Password Testing
 
-(_all steps needed to run full test suite_)
+(_steps to test password reset functionality_)
 
 ## Links and resources
 
-- [gitHub repo](https://github.com/jbshipman/template_api)
-- ([Design Docs]())
+- [GitHub Repo](https://github.com/jbshipman/template_api)
+- _[Design Docs]()_
 - [ERModel link](https://my.mindnode.com/H7e2z2zoBpSTP6Mxqfpz3ykivsDkq5VDztpQB6Kr#-229.3,-212.0,2)
 - [Edutechnical HTTPS session cookies](https://www.youtube.com/playlist?list=PLgYiyoyNPrv_yNp5Pzsx0A3gQ8-tfg66j)
-- [Forgot password](https://medium.com/binar-academy/forgot-password-feature-on-rails-api-8e4a7368c59)
-- ([Project Blog]())
-- ([Project Demo]())
+- [Password Reset](https://medium.com/binar-academy/forgot-password-feature-on-rails-api-8e4a7368c59)
+- [Sending Email](https://medium.com/@pascales/welcome-email-for-new-user-using-action-mailer-becdb43ee6a)
+- _[Project Blog]()_
+- _[Project Demo]()_
