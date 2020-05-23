@@ -32,7 +32,7 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  # Comment out the below as it is used again, ln43
+  # Comment out the below as it is used again
   # if email is not needed in your app uncomment this one
   # config.action_mailer.raise_delivery_errors = false
 
@@ -40,10 +40,11 @@ Rails.application.configure do
 
   # configuration for sending out welcome email from Gmail
   config.action_mailer.delivery_method = :sendmail
+  # config.action_mailer.delivery_method = :test
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_options = { from: "jbshipdev@gmail.com" }
-  config.action_mail.delivery_method = :smtp
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,

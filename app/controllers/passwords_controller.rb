@@ -13,7 +13,10 @@ class PasswordsController < ApplicationController
     # if present then generate a token
     if user.present?
       user.generate_password_token!
-      # SEND EMAIL TO USER
+
+      # send out email
+      UserMailer.forgot_password(user).deliver_now
+
       render json: { status: "ok" }, status: :ok
     else
       render json: { error: "Email address not found. Please check and try again." }, status: :not_found
@@ -32,6 +35,7 @@ class PasswordsController < ApplicationController
     if user.present? && user.password_token_valid?
       if user.reset_password!(params[:password])
         render json: { status: "ok" }, status: :ok
+        UserMailer.password_reset(user).deliver_now
       else
         render json: { error: user.errors.full_messages }, status: :unprocessable_entity
       end
