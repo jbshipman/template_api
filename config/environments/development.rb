@@ -41,6 +41,7 @@ Rails.application.configure do
   # configuration for sending out welcome email from Gmail
   config.action_mailer.delivery_method = :sendmail
   # config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options = { :host => "http://localhost:3001/password/reset" }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_options = { from: "jbshipdev@gmail.com" }
