@@ -364,7 +364,7 @@ To test the full process start by creating a new user. This can be done in a rai
 
 _new user POST_
 
-![Image](_api/app/assets/images/readme_img/inso_newuser_post.png)
+![Image](./app/assets/images/readme_img/inso_newuser_post.png)
 
 ## Links and resources
 
