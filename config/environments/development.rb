@@ -44,14 +44,14 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => "http://localhost:3001/password/reset" }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_options = { from: "jbshipdev@gmail.com" }
+  config.action_mailer.default_options = { from: "make-an-email@gmail.com" }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
     domain: "gmail.com",
-    user_name: "jbshipdev@gmail.com",
-    password: "hecrem-gaqma4-miHwyt",
+    user_name: "make-an-email@gmail.com",
+    password: "password",
     authentication: "plain",
     enable_starttls_auto: true,
   }
