@@ -69,7 +69,7 @@ rails g model User username email password_digest
   end
 ```
 
-> Default configuration is to force a unique username and email for each user that registers.
+Default configuration is to enforce a unique username and email for each user that registers. Password tokens are generated as a random hex number 16 characters long; and a timestamp is created at the time of generation. That timestamp is used to compare against when the password is reset to ensure a timeframe inwhich the token is valid; in this template it is set to a 4 hour window but that can be changed.
 
 ---
 
@@ -78,7 +78,6 @@ rails g model User username email password_digest
 This module creates a before action to be used universally that sets the current user to the user stored in sessions; allowing front-end pages to check the current user when needed.
 
 ```ruby
-...
   extend ActiveSupport::Concern
 
   included do
@@ -90,7 +89,6 @@ This module creates a before action to be used universally that sets the current
       @current_user = User.find(session[:user_id])
     end
   end
-...
 ```
 
 **sessions_controller.rb**
@@ -98,7 +96,6 @@ This module creates a before action to be used universally that sets the current
 Controlls user session creation, logging in and logging out.
 
 ```ruby
-...
   include CurrentUserConcern
 
   def create
@@ -135,15 +132,13 @@ Controlls user session creation, logging in and logging out.
     reset_session
     render json: { status: 200, logged_out: true }
   end
-...
 ```
 
 **registrations_controller.rb**
 
-Handles the creation of a user account.
+Handles the creation of a user account and wraps the json object in a user key. The json string for a user will look like the following. `{"user":{"username":"", "email":"", "password":"", "password_confirmation":""}}`
 
 ```ruby
-...
   def create
     user = User.create!(
       username: params["user"]["username"],
@@ -162,7 +157,6 @@ Handles the creation of a user account.
       render json: { status: 500 }
     end
   end
-...
 ```
 
 #### API Endpoints / Routes
@@ -220,6 +214,7 @@ end
 Two posts from Pascales Kurniawan are my sources that helped me build a password reset process including send out emails for a welcome, password reset and a reset confirmation.
 
 It starts with creating a passwords controller, there's a lot here but we will go through it all.
+
 **passwords_controller.rb**
 
 ```ruby
@@ -361,7 +356,15 @@ Server response if configuration is correct:
 
 ### Forgotten Password Testing
 
-(_steps to test password reset functionality_)
+To test the process for reseting a password (and the emailing functionality) use a program like insomnia or postman; or modify the above curl command that checks if there is a user stored in sessions.
+
+For password reset test I used insomnia and will include screenshots of the three POST requests needed for full testing.
+
+To test the full process start by creating a new user. This can be done in a rails console but doing so will bypass the `registrations_controller.rb` and therefore the email process. So in insomnia create a POST request with all the needed new user information.
+
+_new user POST_
+
+![Image](_api/app/assets/images/readme_img/inso_newuser_post.png)
 
 ## Links and resources
 
