@@ -320,6 +320,31 @@ Lets start with what needs to be configured in `_api/config/environments/develop
   }
 ```
 
+**email views**
+These are simple `html.erb` files and `text.erb` files. They are all in the user_mailer folder within the views folder of the rails app. There is a view that corresponds with each method in the `_api/app/mailers/user_mailer.rb` file. Those methods create the email header; the views files create the email body.
+
+_forgot_password.html.erb_
+
+```shellscript
+<h1>Forgot your password</h1>
+<p>
+  Don't worry about it, this happens to us all from time to time.<br />
+  Your username on record is: <%= @user.username %><br />
+  Your email on record is: <%= @user.email%>
+</p>
+<p>
+  Follow this link to create a new password <%= link_to "Reset Your Password",
+  ('http://localhost:3001/password/reset?token='+@user.reset_password_token) %>
+</p>
+<p>
+  This link will only work once and is only valid for the next 4 hours; so get
+  to it. <br />
+  Cheers!
+</p>
+```
+
+> This specific view is important because it shows how to embed the reset token into the link back to server so the user never has to see or interact with the token.
+
 ## Deployment
 
 ## Testing
@@ -362,9 +387,48 @@ For password reset test I used insomnia and will include screenshots of the thre
 
 To test the full process start by creating a new user. This can be done in a rails console but doing so will bypass the `registrations_controller.rb` and therefore the email process. So in insomnia create a POST request with all the needed new user information.
 
+As long as you setup the email services first before these tests then you will get an email after registering a new user, requesting a new password and after setting a new password.
+
+You will need rails console to get the reset token to add to the reset post request, but with a frontend or a set of views built out it will pass that token along as needed.
+
 _new user POST_
 
-![Image](./app/assets/images/readme_img/inso_newuser_post.png)
+![image](./app/assets/images/readme_img/inso_newuser_post.png)
+
+_new user POST response_
+
+![image](./app/assets/images/readme_img/inso_newuser_post_resp.png)
+
+_new user welcome email_
+
+![image](./app/assets/images/readme_img/welcome_email.png)
+
+_forgot password POST_
+
+![Image](./app/assets/images/readme_img/inso_forgot_post.png)
+
+_forgot password POST response_
+
+![Image](./app/assets/images/readme_img/inso_forgot_post_resp.png)
+
+_forgot password email_
+
+![Image](./app/assets/images/readme_img/forgot_email.png)
+
+_password reset POST_
+
+![Image](./app/assets/images/readme_img/inso_reset_post.png)
+
+_password reset POST response_
+
+![Image](./app/assets/images/readme_img/inso_reset_post_resp.png)
+
+_password reset email_
+
+![Image](./app/assets/images/readme_img/confirmation_email.png)
+
+_password reset token from rails console_
+![Image](./app/assets/images/readme_img/rails_c_reset_token.png)
 
 ## Links and resources
 
