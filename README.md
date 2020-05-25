@@ -347,6 +347,14 @@ _forgot_password.html.erb_
 
 ## Deployment
 
+The only steps needed to deploy this template api are as follows:
+
+1. fork the repo in GitHub
+2. clone it to your local system - allow the template to be the root of your backend, you can rename it as needed
+3. run `bundle` from api root
+
+That is it. The api is set and ready to go. You can start up the server and test the functionality after you update smtp settings to an email you want to test with.
+
 ## Testing
 
 ### Sessions Testing
