@@ -440,9 +440,11 @@ _password reset token from rails console_
 
 ## Links and resources
 
-- [GitHub Repo](https://github.com/jbshipman/template_api)
+_italic bullet points to be made after forking this template_
+
+- _[GitHub Repo]()_
 - _[Design Docs]()_
-- [ERModel link](https://my.mindnode.com/H7e2z2zoBpSTP6Mxqfpz3ykivsDkq5VDztpQB6Kr#-229.3,-212.0,2)
+- _[ERModel link]()_
 - [Edutechnical HTTPS session cookies](https://www.youtube.com/playlist?list=PLgYiyoyNPrv_yNp5Pzsx0A3gQ8-tfg66j)
 - [Password Reset](https://medium.com/binar-academy/forgot-password-feature-on-rails-api-8e4a7368c59)
 - [Sending Email](https://medium.com/@pascales/welcome-email-for-new-user-using-action-mailer-becdb43ee6a)
