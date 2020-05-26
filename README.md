@@ -445,8 +445,8 @@ _italic bullet points to be made after forking this template_
 - _[GitHub Repo]()_
 - _[Design Docs]()_
 - _[ERModel link]()_
+- _[Project Blog]()_
+- _[Project Demo]()_
 - [Edutechnical HTTPS session cookies](https://www.youtube.com/playlist?list=PLgYiyoyNPrv_yNp5Pzsx0A3gQ8-tfg66j)
 - [Password Reset](https://medium.com/binar-academy/forgot-password-feature-on-rails-api-8e4a7368c59)
 - [Sending Email](https://medium.com/@pascales/welcome-email-for-new-user-using-action-mailer-becdb43ee6a)
-- _[Project Blog]()_
-- _[Project Demo]()_
