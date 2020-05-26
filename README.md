@@ -1,6 +1,6 @@
 # Template_API
 
-This readme can be used not just a reference for the template but also goes into details for how the user authentication works and why it is configured the way it is. It is very important to note that this all comes from a great youtube series from [Edutechnical HTTPS session cookies](https://www.youtube.com/playlist?list=PLgYiyoyNPrv_yNp5Pzsx0A3gQ8-tfg66j).
+This readme can be used not just a reference for the template but also goes into details for how the user authentication works and why it is configured the way it is. It is very important to note that this all comes from a great youtube series from [Edutechnical HTTPS session cookies](https://www.youtube.com/playlist?list=PLgYiyoyNPrv_yNp5Pzsx0A3gQ8-tfg66j). The password reset and emailer functionality is adapted from two blog posts by Pascales Kurniawan, links to the posts are at the bottom of the readme.
 
 ## Configuration
 
