@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :profiles, only: [:show, :create, :update]
 
   # Routes for forgotten password
   post "password/forgot", to: "passwords#forgot"
